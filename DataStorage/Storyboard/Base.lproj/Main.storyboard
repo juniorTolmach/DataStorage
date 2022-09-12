@@ -65,7 +65,7 @@
                     <navigationItem key="navigationItem" title="Хранение данных " id="uVQ-fD-44R"/>
                     <connections>
                         <segue destination="ZhV-l2-NWp" kind="show" identifier="userDefaults" id="Yas-5P-odM"/>
-                        <segue destination="ZhV-l2-NWp" kind="show" identifier="coreData" id="Pda-Y5-Uh3"/>
+                        <segue destination="9RM-1Q-SNZ" kind="show" identifier="coreData" id="bdv-h2-6fe"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlR-MR-l0k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,6 +124,41 @@
                 <exit id="2W3-ah-emw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1935" y="96"/>
+        </scene>
+        <!--Task List-->
+        <scene sceneID="Oh0-2Y-Qil">
+            <objects>
+                <tableViewController id="9RM-1Q-SNZ" customClass="TaskListTableViewController" customModule="DataStorage" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ekr-aB-o7w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="t5a-3a-x7O">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t5a-3a-x7O" id="Ual-yb-pBI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9RM-1Q-SNZ" id="iyA-UJ-jiM"/>
+                            <outlet property="delegate" destination="9RM-1Q-SNZ" id="M1i-zd-lJr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Task List" id="Nma-aI-3Ut">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FNx-CV-K1u">
+                            <connections>
+                                <action selector="addNewTask:" destination="9RM-1Q-SNZ" id="Mvr-wZ-nyP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIr-zw-ZNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1935" y="806"/>
         </scene>
         <!--New Family Member View Controller-->
         <scene sceneID="M91-et-d6Z">
@@ -217,9 +252,6 @@
             <point key="canvasLocation" x="20.289855072463769" y="95.758928571428569"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Yas-5P-odM"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

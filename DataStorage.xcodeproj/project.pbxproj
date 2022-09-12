@@ -19,6 +19,10 @@
 		195657D628CDCB1100FF4207 /* FamifyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195657D528CDCB1100FF4207 /* FamifyTableViewController.swift */; };
 		195657D828CDCE2F00FF4207 /* NewFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195657D728CDCE2F00FF4207 /* NewFamilyMemberViewController.swift */; };
 		195657E028CDD5DC00FF4207 /* Extansion + TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195657DF28CDD5DC00FF4207 /* Extansion + TableViewCell.swift */; };
+		195657E428CEDA0D00FF4207 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195657E328CEDA0D00FF4207 /* AlertController.swift */; };
+		195657E728CEDAB900FF4207 /* TaskLiskCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 195657E528CEDAB900FF4207 /* TaskLiskCoreData.xcdatamodeld */; };
+		195657E928CEDB3F00FF4207 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195657E828CEDB3F00FF4207 /* CoreDataManager.swift */; };
+		195657EB28CF4C5A00FF4207 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195657EA28CF4C5A00FF4207 /* TaskListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		195657D528CDCB1100FF4207 /* FamifyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamifyTableViewController.swift; sourceTree = "<group>"; };
 		195657D728CDCE2F00FF4207 /* NewFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		195657DF28CDD5DC00FF4207 /* Extansion + TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extansion + TableViewCell.swift"; path = "DataStorage/ViewControllers/Extansion + TableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		195657E328CEDA0D00FF4207 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		195657E628CEDAB900FF4207 /* TaskLiskCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskLiskCoreData.xcdatamodel; sourceTree = "<group>"; };
+		195657E828CEDB3F00FF4207 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		195657EA28CF4C5A00FF4207 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				195657B128CDAC2300FF4207 /* DataStorage */,
+				195657E528CEDAB900FF4207 /* TaskLiskCoreData.xcdatamodeld */,
 				195657B028CDAC2300FF4207 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				195657D128CDC7FB00FF4207 /* UserDefaultsManager.swift */,
+				195657E828CEDB3F00FF4207 /* CoreDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -105,11 +115,12 @@
 		195657CD28CDC63F00FF4207 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				195657CE28CDC64B00FF4207 /* Cell */,
+				195657DE28CDD58400FF4207 /* Extension */,
 				195657C628CDAFA400FF4207 /* MainViewController.swift */,
 				195657D528CDCB1100FF4207 /* FamifyTableViewController.swift */,
 				195657D728CDCE2F00FF4207 /* NewFamilyMemberViewController.swift */,
-				195657DE28CDD58400FF4207 /* Extension */,
-				195657CE28CDC64B00FF4207 /* Cell */,
+				195657EA28CF4C5A00FF4207 /* TaskListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				195657DF28CDD5DC00FF4207 /* Extansion + TableViewCell.swift */,
+				195657E328CEDA0D00FF4207 /* AlertController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -221,11 +233,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				195657D428CDC88E00FF4207 /* Family.swift in Sources */,
+				195657EB28CF4C5A00FF4207 /* TaskListTableViewController.swift in Sources */,
 				195657D828CDCE2F00FF4207 /* NewFamilyMemberViewController.swift in Sources */,
 				195657D628CDCB1100FF4207 /* FamifyTableViewController.swift in Sources */,
 				195657C728CDAFA400FF4207 /* MainViewController.swift in Sources */,
 				195657E028CDD5DC00FF4207 /* Extansion + TableViewCell.swift in Sources */,
 				195657D228CDC7FB00FF4207 /* UserDefaultsManager.swift in Sources */,
+				195657E928CEDB3F00FF4207 /* CoreDataManager.swift in Sources */,
+				195657E728CEDAB900FF4207 /* TaskLiskCoreData.xcdatamodeld in Sources */,
+				195657E428CEDA0D00FF4207 /* AlertController.swift in Sources */,
 				195657B328CDAC2300FF4207 /* AppDelegate.swift in Sources */,
 				195657B528CDAC2300FF4207 /* SceneDelegate.swift in Sources */,
 				195657C928CDBEF400FF4207 /* MainCollectionViewCell.swift in Sources */,
@@ -444,6 +460,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		195657E528CEDAB900FF4207 /* TaskLiskCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				195657E628CEDAB900FF4207 /* TaskLiskCoreData.xcdatamodel */,
+			);
+			currentVersion = 195657E628CEDAB900FF4207 /* TaskLiskCoreData.xcdatamodel */;
+			path = TaskLiskCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 195657A728CDAC2300FF4207 /* Project object */;
 }

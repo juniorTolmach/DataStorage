@@ -42,7 +42,7 @@ class NewFamilyMemberViewController: UIViewController, UIPickerViewDelegate {
     
     @objc private func textFieldDidChange() {
         guard let name = nameTextField.text, let surname = surnameTextField.text, let status = statusTextField.text else { return }
-        if !name.isEmpty {
+        if !name.isEmpty, !surname.isEmpty, !status.isEmpty {
             saveButton.isEnabled = true
         }
         
@@ -80,4 +80,6 @@ extension NewFamilyMemberViewController: UITableViewDelegate, UIPickerViewDataSo
         statusTextField.text = status[row]
         statusTextField.resignFirstResponder()
     }
+    
+    
 }
