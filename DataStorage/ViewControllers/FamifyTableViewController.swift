@@ -42,7 +42,7 @@ class FamifyTableViewController: UITableViewController {
         content.text = family.fullname
         content.secondaryText = family.status
         cell.contentConfiguration = content
-        cell.configure(with: family)
+        cell.configureUserDefaults(with: family)
 
         return cell
     }

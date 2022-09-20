@@ -16,22 +16,7 @@ enum UserAction: String, CaseIterable {
 class MainViewController: UICollectionViewController {
     
     let userAction = UserAction.allCases
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,8 +38,7 @@ class MainViewController: UICollectionViewController {
         switch userAction {
         case .userDefaults: performSegue(withIdentifier: "userDefaults", sender: nil)
         case .coreData: performSegue(withIdentifier: "coreData", sender: nil)
-        case .realm:
-            break
+        case .realm: performSegue(withIdentifier: "realm", sender: nil)
         }
     }
 }

@@ -27,8 +27,8 @@ class CoreDataManager {
         viewContext = persistentContainer.viewContext
     }
     
-    func fetchData(completion: (Result<[Task],Error>) -> Void) {
-        let fetchRequest = Task.fetchRequest()
+    func fetchData(completion: (Result<[TaskCoreData],Error>) -> Void) {
+        let fetchRequest = TaskCoreData.fetchRequest()
         
         do {
             let tasks = try viewContext.fetch(fetchRequest)
@@ -38,18 +38,18 @@ class CoreDataManager {
         }
     }
     
-    func save(_ taskName: String, completion: (Task) -> Void) {
-        let task = Task(context: viewContext)
+    func save(_ taskName: String, completion: (TaskCoreData) -> Void) {
+        let task = TaskCoreData(context: viewContext)
         task.title = taskName
         completion(task)
         saveContext()
     }
-    func edit(_ task: Task, newName: String) {
+    func edit(_ task: TaskCoreData, newName: String) {
         task.title = newName
         saveContext()
     }
     
-    func delete(_ task: Task) {
+    func delete(_ task: TaskCoreData) {
         viewContext.delete(task)
         saveContext()
     }

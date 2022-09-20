@@ -9,7 +9,7 @@ import UIKit
 
 class TaskListTableViewController: UITableViewController {
     
-    private var taskList: [Task] = []
+    private var taskList: [TaskCoreData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +80,7 @@ extension TaskListTableViewController {
 }
 
 extension TaskListTableViewController {
-    private func showAlert(task: Task? = nil, completion: (() -> Void)? = nil) {
+    private func showAlert(task: TaskCoreData? = nil, completion: (() -> Void)? = nil) {
         let title = task != nil ? "Update Task" : "New Task"
         let alert = UIAlertController.createAlertController(withTitle: title)
         
